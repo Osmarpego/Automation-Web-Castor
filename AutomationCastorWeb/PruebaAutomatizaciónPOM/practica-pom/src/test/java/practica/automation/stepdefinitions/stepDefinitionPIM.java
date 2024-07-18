@@ -3,7 +3,11 @@ package practica.automation.stepdefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
+import org.json.simple.parser.ParseException;
 import practica.automation.steps.stepsPIMModule;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class stepDefinitionPIM {
 
@@ -16,7 +20,7 @@ public class stepDefinitionPIM {
     }
 
     @When("Fill out the form")
-    public void fill_out_the_form() throws InterruptedException {
+    public void fill_out_the_form() throws InterruptedException, IOException, ParseException {
         userPIM.fillForm();
     }
 
@@ -31,8 +35,8 @@ public class stepDefinitionPIM {
     }
 
     @When("Find user for employee information")
-    public void find_user_to_edit() throws InterruptedException {
-        userPIM.findUserToEdit("Test QA");
+    public void find_user_to_edit() throws InterruptedException, IOException, ParseException {
+        userPIM.findUserToEdit();
     }
 
     @When("Select search button")

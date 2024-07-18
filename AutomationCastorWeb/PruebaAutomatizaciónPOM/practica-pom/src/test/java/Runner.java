@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/crear_cuenta_web.feature"
         ,glue={"practica.automation.stepdefinitions"},
-        tags = "@PlatformOrange"
+        tags = "@FieldValidation"
 )
 
 public class Runner {
